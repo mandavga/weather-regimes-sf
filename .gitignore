@@ -1,0 +1,12 @@
+.Rproj
+.Rproj.user/
+.Rhistory
+
+*.png
+*.tif
+*.tif.aux.xml
+*.csv
+*.txt
+*.jpg
+*.jpeg
+*.rds
