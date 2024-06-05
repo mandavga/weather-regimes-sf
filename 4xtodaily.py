@@ -17,7 +17,6 @@ level = 1000
 # daily.attrs["title"] = "daily NCEP/DOE Reanalysis 2"
 # daily.to_netcdf(f"data/daily-{level}hpa.nc")
 
-
 daily = xarray.load_dataset(f"data/daily-{level}hpa.nc")
 
 
