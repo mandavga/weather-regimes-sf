@@ -1,7 +1,5 @@
 import xarray
 
-# daily4x = xarray.open_dataset("data/4xdaily-500hpa.nc")
-
 level = 1000
 # no need to do it for 1000 level
 # daily4x = xarray.open_dataset("/home/gaurav/ext-hard-disc-2/ncep-reanalysis-2/4xdaily.nc")
