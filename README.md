@@ -1,7 +1,7 @@
 TITLE: Weather Regime Analysis (Sea Level)
 AUTHOR: Gaurav Atreya, Garima Mandavya
 
-* Objective
+# Objective
 Redoing the weather regime analysis on 1000 hPa.
 
 Our Study area range for the weather regimes is:
@@ -9,8 +9,8 @@ Our Study area range for the weather regimes is:
 - lon: 330.0 → 60.0
 
 
-* Steps
-** Download, Crop and Anomaly calculation
+# Steps
+## Download, Crop and Anomaly calculation
 
 NCEP Reanalysis Data download from: https://psl.noaa.gov/data/gridded/data.ncep.reanalysis2.html
 
@@ -53,19 +53,24 @@ We also had to save into a csv file to read it from R later
     df = daily2.anomaly.to_dataframe()
     df.to_csv(outfile)
 
-** Clustering
+## Clustering
 
-*** PCA Analysis
+### PCA Analysis
 
-*** Kmeans Cluster
+### Kmeans Cluster
+Run the file: `kmeans.r` to identify the clusters
 
-*** NHMM Weather Regimes
+### NHMM Weather Regimes
 
 Run the file: `nhmm-regimes.r` to identify the clusters
 Run the file: `simulate-wr.r` to simulate weather regimes for future/simulated years
 
-** Block Bootstraping
+## Block Bootstraping
 
 Run: `block-bootstrap.py`
 
 It takes a long time, we have made it only run first 40 years out of 1000 for now. The multiprocessing library code is commented out because it didn't run in windows.
+
+## Correlation of WR to precipitation
+
+Run: `correlation_plots.R` to plot the statistics of WR occurrences, seasonality and relationship to precipitation at different location
