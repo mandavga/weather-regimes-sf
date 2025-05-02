@@ -2,7 +2,7 @@ TITLE: Weather Regime Analysis (Sea Level)
 AUTHOR: Gaurav Atreya, Garima Mandavya
 
 # Objective
-Redoing the weather regime analysis on 1000 hPa.
+Could be performed on any level of geopotential heights, e.g., 500 Pa, 1000 hPa.
 
 Our Study area range for the weather regimes is:
 - lat: -50.0 → -15.0
@@ -29,7 +29,9 @@ Here the data is 6 hours timestep, we can calculate the daily mean and then the 
 
     import xarray
 
-    level = 1000
+    level = 1000 
+    
+    #level = 500
 
     daily4x = xarray.open_dataset("data/4xdaily-500hpa.nc")
 
